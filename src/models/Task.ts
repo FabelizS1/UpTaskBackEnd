@@ -67,8 +67,8 @@ export const TaskSchema : Schema = new Schema({
 
 // Middleware
 TaskSchema.pre('deleteOne', {document: true}, async function() { // Esto se va a ejecutar cuando se elimine una tarea
-    console.log(this)
-    console.log(this.getQuery()._id)
+    //console.log(this)
+    //console.log(this.getQuery()._id)
 
     const taskId = this._id
     if(!taskId) return
